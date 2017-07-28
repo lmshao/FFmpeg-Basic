@@ -11,17 +11,17 @@ This is the ffmpeg introductory tutorial with code samples. The tutorial focuses
 Configure VS2017 FFmpeg project.
 - **Properties - C/C++ - General - Additional Include Directories**   
 \.\./include;%(AdditionalIncludeDirectories)   
-- **Properties - Linker - General - Additional Library Directories**
+- **Properties - Linker - General - Additional Library Directories**   
 \.\./include;%(AdditionalIncludeDirectories)
 - **Properties - Linker - Input - Additional Dependencies**   
 avcodec.lib;avformat.lib;avutil.lib;swscale.lib;swresample.lib;postproc.lib;avfilter.lib;avdevice.lib;%(AdditionalDependencies)  
 
 配置VS2017 FFmpeg开发环境
-- **属性 - C/C++ - 常规 - 附加包含目录**
+- **属性 - C/C++ - 常规 - 附加包含目录**   
 \.\./include;%(AdditionalIncludeDirectories)
-- **属性 - 链接器 - 常规 - 附加库目录**
+- **属性 - 链接器 - 常规 - 附加库目录**   
 \.\./lib;%(AdditionalLibraryDirectories)
-- **属性 - 链接器 - 输入 - 附加依赖项**
+- **属性 - 链接器 - 输入 - 附加依赖项**   
 avcodec.lib;avformat.lib;avutil.lib;swscale.lib;swresample.lib;postproc.lib;avfilter.lib;avdevice.lib;%(AdditionalDependencies)   
 
 ## Project Description
