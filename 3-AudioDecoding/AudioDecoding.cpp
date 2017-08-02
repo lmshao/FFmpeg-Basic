@@ -1,12 +1,13 @@
+/*
+ * Copyright (c) 2017 Liming Shao <lmshao@163.com>
+ */
+
 #include "AudioDecoding.h"
-
-
 
 AudioDecoding::AudioDecoding():
     mFormatCtx(NULL), mCodecCtx(NULL)
 {
 }
-
 
 AudioDecoding::~AudioDecoding()
 {
