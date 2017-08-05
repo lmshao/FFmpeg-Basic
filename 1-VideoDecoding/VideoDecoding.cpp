@@ -82,8 +82,8 @@ bool VideoDecoding::readFrameProc()
     AVFrame *frame = av_frame_alloc();
     int tmpW = mFormatCtx->streams[mVideoStreamIndex]->codecpar->width;
     int tmpH = mFormatCtx->streams[mVideoStreamIndex]->codecpar->height;
-    char outFile[30] = { 0 };
-    sprintf(outFile, "Sample_%dx%d_yuv420p.yuv", tmpW, tmpH);
+    char outFile[40] = { 0 };
+    sprintf(outFile, "../assets/Sample_%dx%d_yuv420p.yuv", tmpW, tmpH);
 
     FILE *fd = fopen(outFile, "wb");
 
@@ -114,7 +114,7 @@ bool VideoDecoding::decodeVideoFrame(AVPacket *pkt, AVFrame *frame, FILE *fd)
         saveYUV(frame, fd);
 
         // save every frame as a .pgm gray image
-        savePGM(frame);
+        //savePGM(frame);
 
         printf("."); // program running state
         return false;
@@ -128,8 +128,8 @@ bool VideoDecoding::savePGM(AVFrame * frame)
 {
     static int frameNum = 0;
 
-    char pgmFile[20];
-    sprintf(pgmFile, "frame%02d.pgm", frameNum++);
+    char pgmFile[30];
+    sprintf(pgmFile, "../assets/frame%d.pgm", frameNum++);
     FILE *pFile = fopen(pgmFile, "wb");
 
     fprintf(pFile, "P5\n%d %d\n%d\n", frame->width, frame->height, 255);
