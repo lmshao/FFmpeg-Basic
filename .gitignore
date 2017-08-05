@@ -69,3 +69,7 @@ ipch/
 *.vsp
 *.vspx
 *.sap
+
+# media file
+*.pgm
+*.yuv
