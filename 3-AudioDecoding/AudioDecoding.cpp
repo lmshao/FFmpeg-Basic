@@ -67,8 +67,8 @@ bool AudioDecoding::initCodecContext()
 
 bool AudioDecoding::readFrameProc()
 {
-
-    FILE *fd = fopen("out.pcm", "wb");
+    // use echo.mp3 as input file
+    FILE *fd = fopen("../assets/out_s16le.pcm", "wb");
     if (!fd) {
         printf("Failed to open input file\n");
         return true;
