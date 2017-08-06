@@ -74,3 +74,4 @@ ipch/
 *.pgm
 *.yuv
 *.h264
+*.pcm
