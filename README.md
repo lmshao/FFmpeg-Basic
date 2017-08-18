@@ -26,25 +26,25 @@ avcodec.lib;avformat.lib;avutil.lib;swscale.lib;swresample.lib;postproc.lib;avfi
 
 ## Project Description
 
-### 0. Test Environment   
+### 0. Test Environment  ![status](https://img.shields.io/badge/status-completed-brightgreen.svg?style=flat)      
 读取视频文件Sample.mkv，输出文件信息。
 
-### 1. Video Decoding
+### 1. Video Decoding    ![status](https://img.shields.io/badge/status-completed-brightgreen.svg?style=flat)    
 读取视频文件Sample.mkv，提取视频流，解码为YUV420P像素格式，并保存为原始YUV420P格式视频文件Sample.yuv。   
 
-### 2. Video Encoding
+### 2. Video Encoding    ![status](https://img.shields.io/badge/status-completed-brightgreen.svg?style=flat)    
 读取未压缩的YUV420P视频文件Sample.yuv，编码为H.264视频格式，并保存为H.264裸流文件Sample.h264。   
 
-### 3. Audio Decoding
-读取视频文件Sample.mkv，提取音频流，解码为PCM格式，并保存为Sample.wav。   
+### 3. Audio Decoding    ![status](https://img.shields.io/badge/status-completed-brightgreen.svg?style=flat)    
+读取音频文件Sample.acc，提取音频流，解码为PCM格式，并保存为Sample.pcm，可以使用ffplay进行播放。   
 
-### 4. Audio Encoding
-读取视频文件Sample.wav，编码为MP3格式，并保存为Sample.mp3。   
+### 4. Audio Encoding    ![status](https://img.shields.io/badge/status-completed-brightgreen.svg?style=flat)    
+读取视频文件Sample.pcm，编码为mp3格式，并保存为Sample.mp3。   
 
-### 5. Remuxing
+### 5. Remuxing    ![status](https://img.shields.io/badge/status-completed-brightgreen.svg?style=flat)    
 读取视频文件Sample.mkv，解复用抽取媒体流，封装为MP4容器格式文件Sample.mp4。    
 
 Changing the "container" format used for a given file. For example from MKV to TS or from MP4 to MKV.   
 
-### 6. Tanscoding
+### 6. Tanscoding    ![status](https://img.shields.io/badge/status-unfinished-red.svg?style=flat)    
 读取视频文件Sample.mkv，解复用抽取音视流，分别编码为HEVC/H.265视频流和OGG音频流，并封装为Sample.ts。   
